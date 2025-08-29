@@ -54,3 +54,8 @@ char* MyStrNCpy(char* destination, const char* source, size_t n) {
     
     return destination_copy;
 }
+
+char* MyStrCat(char *destination, const char *source) {
+    size_t len = MyStrLen(destination);
+    return MyStrCpy(destination + len, source) - len;
+}
