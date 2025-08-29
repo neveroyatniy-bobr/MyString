@@ -39,3 +39,18 @@ char* MyStrCpy(char* destination, const char* source) {
     
     return destination_copy;
 }
+
+char* MyStrNCpy(char* destination, const char* source, size_t n) {
+    char* destination_copy = destination;
+    size_t cnt = 0;
+
+    while (*source != '\0' && cnt < n) {
+        *destination = *source;
+
+        destination++;
+        source++;
+        cnt++;
+    }
+    
+    return destination_copy;
+}

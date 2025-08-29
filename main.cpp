@@ -4,10 +4,11 @@
 #include "MyStringFunctions.h"
 
 int main() {
-    const char* str = "123456789";
+    const char* str = "123456";
     char strcp[10];
+    strcp[9] = '\0';
 
-    printf("%s\n", MyStrCpy(&strcp[0], str));
+    printf("%s\n", MyStrNCpy(strcp, str, 5));
 
     printf("%s\n", str);
     printf("%s\n", strcp);

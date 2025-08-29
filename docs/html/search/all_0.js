@@ -6,5 +6,6 @@ var searchData=
   ['mystrcpy_3',['mystrcpy',['../MyStringFunctions_8h.html#abf15d8298456a5e4d6c2af9a5f7c41ed',1,'MyStrCpy(char *destination, const char *source):&#160;MyStringFunctions.cpp'],['../MyStringFunctions_8cpp.html#abf15d8298456a5e4d6c2af9a5f7c41ed',1,'MyStrCpy(char *destination, const char *source):&#160;MyStringFunctions.cpp']]],
   ['mystringfunctions_2ecpp_4',['MyStringFunctions.cpp',['../MyStringFunctions_8cpp.html',1,'']]],
   ['mystringfunctions_2eh_5',['MyStringFunctions.h',['../MyStringFunctions_8h.html',1,'']]],
-  ['mystrlen_6',['mystrlen',['../MyStringFunctions_8h.html#aecb56a205e8fcaf1af986c682690d3c3',1,'MyStrLen(const char *str):&#160;MyStringFunctions.cpp'],['../MyStringFunctions_8cpp.html#aecb56a205e8fcaf1af986c682690d3c3',1,'MyStrLen(const char *str):&#160;MyStringFunctions.cpp']]]
+  ['mystrlen_6',['mystrlen',['../MyStringFunctions_8h.html#aecb56a205e8fcaf1af986c682690d3c3',1,'MyStrLen(const char *str):&#160;MyStringFunctions.cpp'],['../MyStringFunctions_8cpp.html#aecb56a205e8fcaf1af986c682690d3c3',1,'MyStrLen(const char *str):&#160;MyStringFunctions.cpp']]],
+  ['mystrncpy_7',['mystrncpy',['../MyStringFunctions_8h.html#afa1d200985386abec6cac67620324c97',1,'MyStrNCpy(char *destination, const char *source, size_t n):&#160;MyStringFunctions.cpp'],['../MyStringFunctions_8cpp.html#afa1d200985386abec6cac67620324c97',1,'MyStrNCpy(char *destination, const char *source, size_t n):&#160;MyStringFunctions.cpp']]]
 ];

@@ -103,6 +103,9 @@ Functions</h2></td></tr>
 <tr class="memitem:abf15d8298456a5e4d6c2af9a5f7c41ed" id="r_abf15d8298456a5e4d6c2af9a5f7c41ed"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#abf15d8298456a5e4d6c2af9a5f7c41ed">MyStrCpy</a> (char *destination, const char *source)</td></tr>
 <tr class="memdesc:abf15d8298456a5e4d6c2af9a5f7c41ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирует строку из источника в назначение  <br /></td></tr>
 <tr class="separator:abf15d8298456a5e4d6c2af9a5f7c41ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1d200985386abec6cac67620324c97" id="r_afa1d200985386abec6cac67620324c97"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#afa1d200985386abec6cac67620324c97">MyStrNCpy</a> (char *destination, const char *source, size_t n)</td></tr>
+<tr class="memdesc:afa1d200985386abec6cac67620324c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирует не более n символов из источника в назначение  <br /></td></tr>
+<tr class="separator:afa1d200985386abec6cac67620324c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a376f3da50c227cc9c3ce105e5dfa2a5f" name="a376f3da50c227cc9c3ce105e5dfa2a5f"></a>
@@ -172,8 +175,8 @@ Functions</h2></td></tr>
 <p>Копирует строку из источника в назначение </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">destination</td><td>источник </td></tr>
-    <tr><td class="paramname">source</td><td>назначение </td></tr>
+    <tr><td class="paramname">destination</td><td>назначение </td></tr>
+    <tr><td class="paramname">source</td><td>источник </td></tr>
   </table>
   </dd>
 </dl>
@@ -205,6 +208,52 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Длину строки </dd></dl>
+
+</div>
+</div>
+<a id="afa1d200985386abec6cac67620324c97" name="afa1d200985386abec6cac67620324c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1d200985386abec6cac67620324c97">&#9670;&#160;</a></span>MyStrNCpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * MyStrNCpy </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Копирует не более n символов из источника в назначение </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>назначение </td></tr>
+    <tr><td class="paramname">source</td><td>источник </td></tr>
+    <tr><td class="paramname">n</td><td>n </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><br  />
+ </dd></dl>
 
 </div>
 </div>
