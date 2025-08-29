@@ -7,6 +7,7 @@ const char* MyStrChr(const char* str, int ch) {
         if (*str == ch) {
             return str;
         }
+
         str++;
     }
 
@@ -15,10 +16,26 @@ const char* MyStrChr(const char* str, int ch) {
 
 size_t MyStrLen(const char* str) {
     size_t len = 0;
+
     while (*str != '\0') {
         len++;
         str++;
     }
 
     return len;
+}
+
+char* MyStrCpy(char* destination, const char* source) {
+    char* destination_copy = destination;
+
+    while (*source != '\0') {
+        *destination = *source;
+
+        destination++;
+        source++;
+    }
+
+    *destination = *source;
+    
+    return destination_copy;
 }

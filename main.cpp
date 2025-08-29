@@ -5,9 +5,12 @@
 
 int main() {
     const char* str = "123456789";
+    char strcp[10];
 
-    printf("%d\n", strlen(str));
-    printf("%d\n", MyStrLen(str));
+    printf("%s\n", MyStrCpy(&strcp[0], str));
+
+    printf("%s\n", str);
+    printf("%s\n", strcp);
 
     return 0;
 }
