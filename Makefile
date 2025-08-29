@@ -11,7 +11,11 @@ OBJ = $(patsubst $(SRC_PREF)%.cpp, $(OBJ_PREF)%.o, $(SRC))
 RED = "\e[31m"
 RESET = "\e[0m"
 
-all: $(MY_PROGRAM) Doxygen CommitWarning
+All: Build
+
+BuildAndRun: Build Run
+
+Build: $(MY_PROGRAM) Doxygen CommitWarning
 
 $(MY_PROGRAM): $(OBJ) $(OBJ_PREF)main.o
 	g++ $^ -o $(MY_PROGRAM) $(FLAGS)
@@ -21,6 +25,9 @@ $(OBJ_PREF)main.o: main.cpp
 
 $(OBJ_PREF)%.o: $(SRC_PREF)%.cpp
 	g++ -c $< -o $@ $(FLAGS)
+
+Run:
+	./$(MY_PROGRAM)
 
 Doxygen:
 	doxygen docs/Doxyfile
