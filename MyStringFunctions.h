@@ -1,0 +1,6 @@
+#ifndef MY_STRING_FUNCTIONS_H_
+#define MY_STRING_FUNCTIONS_H_
+
+
+
+#endif // MY_STRING_FUNCTIONS_H_
