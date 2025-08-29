@@ -6,8 +6,8 @@
 int main() {
     const char* str = "123456789";
 
-    printf("%c\n", *MyStrChr(str, '2'));
-    printf("%c\n", *strchr(str, '2'));
+    printf("%d\n", strlen(str));
+    printf("%d\n", MyStrLen(str));
 
     return 0;
 }

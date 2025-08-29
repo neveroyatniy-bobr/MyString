@@ -84,10 +84,15 @@ $(document).ready(function() { init_codefold(0); });
 <a href="MyStringFunctions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MY_STRING_FUNCTIONS_H_</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MY_STRING_FUNCTIONS_H_</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="MyStringFunctions_8h.html#a376f3da50c227cc9c3ce105e5dfa2a5f">MyStrChr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keywordtype">int</span> ch);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif </span><span class="comment">// MY_STRING_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="MyStringFunctions_8h.html#a376f3da50c227cc9c3ce105e5dfa2a5f">MyStrChr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keywordtype">int</span> ch);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">size_t</span> <a class="code hl_function" href="MyStringFunctions_8h.html#aecb56a205e8fcaf1af986c682690d3c3">MyStrLen</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif </span><span class="comment">// MY_STRING_FUNCTIONS_H_</span></div>
 <div class="ttc" id="aMyStringFunctions_8h_html_a376f3da50c227cc9c3ce105e5dfa2a5f"><div class="ttname"><a href="MyStringFunctions_8h.html#a376f3da50c227cc9c3ce105e5dfa2a5f">MyStrChr</a></div><div class="ttdeci">const char * MyStrChr(const char *str, int ch)</div><div class="ttdoc">Ищет первое появление символа в строке</div><div class="ttdef"><b>Definition</b> MyStringFunctions.cpp:5</div></div>
+<div class="ttc" id="aMyStringFunctions_8h_html_aecb56a205e8fcaf1af986c682690d3c3"><div class="ttname"><a href="MyStringFunctions_8h.html#aecb56a205e8fcaf1af986c682690d3c3">MyStrLen</a></div><div class="ttdeci">size_t MyStrLen(const char *str)</div><div class="ttdoc">Ищет длину строки без нуль-терминатора</div><div class="ttdef"><b>Definition</b> MyStringFunctions.cpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
