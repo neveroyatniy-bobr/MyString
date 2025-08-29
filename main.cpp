@@ -4,13 +4,11 @@
 #include "MyStringFunctions.h"
 
 int main() {
-    const char* str = "123";
-    char strcp[20] = "123456";
+    const char* str1 = "1237999999";
+    const char* str2 = "123400";
 
-    printf("%s\n", MyStrCat(strcp, str));
-
-    printf("%s\n", str);
-    printf("%s\n", strcp);
+    printf("%d\n", MyStrCmp(str1, str2));
+    printf("%d\n", strcmp(str1, str2));
 
     return 0;
 }

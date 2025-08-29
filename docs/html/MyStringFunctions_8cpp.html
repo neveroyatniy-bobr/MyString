@@ -80,6 +80,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="MyStringFunctions_8h_source.html">MyStringFunctions.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MyStringFunctions.cpp:</div>
 <div class="dyncontent">
@@ -103,6 +104,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a997f8d762e937bcd7da9a005c4aea01d" id="r_a997f8d762e937bcd7da9a005c4aea01d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a997f8d762e937bcd7da9a005c4aea01d">MyStrCat</a> (char *destination, const char *source)</td></tr>
 <tr class="memdesc:a997f8d762e937bcd7da9a005c4aea01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объединяет 2 строчки копируя источник в конец назначения  <br /></td></tr>
 <tr class="separator:a997f8d762e937bcd7da9a005c4aea01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b6d0f9adddb84424ce4634a20ee493" id="r_a91b6d0f9adddb84424ce4634a20ee493"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a91b6d0f9adddb84424ce4634a20ee493">MyStrCmp</a> (const char *str1, const char *str2)</td></tr>
+<tr class="memdesc:a91b6d0f9adddb84424ce4634a20ee493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнивает 2 строки  <br /></td></tr>
+<tr class="separator:a91b6d0f9adddb84424ce4634a20ee493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a997f8d762e937bcd7da9a005c4aea01d" name="a997f8d762e937bcd7da9a005c4aea01d"></a>
@@ -178,6 +182,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Указатель на символ в строке </dd></dl>
+
+</div>
+</div>
+<a id="a91b6d0f9adddb84424ce4634a20ee493" name="a91b6d0f9adddb84424ce4634a20ee493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b6d0f9adddb84424ce4634a20ee493">&#9670;&#160;</a></span>MyStrCmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyStrCmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сравнивает 2 строки </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str1</td><td>Строка 1 </td></tr>
+    <tr><td class="paramname">str2</td><td>Строка 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Если чтроки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1 </dd></dl>
 
 </div>
 </div>

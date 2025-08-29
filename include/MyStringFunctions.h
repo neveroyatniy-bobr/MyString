@@ -33,4 +33,10 @@ char* MyStrNCpy(char* destination, const char* source, size_t n);
 /// @return Назначение, в конец которого скопирован источник
 char* MyStrCat(char *destination, const char *source);
 
+/// @brief Сравнивает 2 строки
+/// @param str1 Строка 1
+/// @param str2  Строка 2
+/// @return Если чтроки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1
+int MyStrCmp(const char *str1, const char *str2);
+
 #endif // MY_STRING_FUNCTIONS_H_

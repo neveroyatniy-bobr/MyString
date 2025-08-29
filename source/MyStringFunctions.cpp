@@ -1,6 +1,7 @@
 #include "MyStringFunctions.h"
 
 #include <stdio.h>
+#include <math.h>
 
 const char* MyStrChr(const char* str, int ch) {
     while (*str != '\0') {
@@ -58,4 +59,16 @@ char* MyStrNCpy(char* destination, const char* source, size_t n) {
 char* MyStrCat(char *destination, const char *source) {
     size_t len = MyStrLen(destination);
     return MyStrCpy(destination + len, source) - len;
+}
+
+int MyStrCmp(const char *str1, const char *str2) {
+    while (*str1 == *str2 && *str1 != '\0') {
+        str1++;
+        str2++;
+    }
+    
+    int signed_ans = *str1 - *str2;
+    int sign = signed_ans == 0 ? 0 : signed_ans / abs(signed_ans);
+    
+    return sign;
 }
