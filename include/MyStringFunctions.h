@@ -33,6 +33,13 @@ char* MyStrNCpy(char* destination, const char* source, size_t n);
 /// @return Назначение, в конец которого скопирован источник
 char* MyStrCat(char *destination, const char *source);
 
+/// @brief Копирует в конец назначения не более n символов из источника
+/// @param destination Назначение
+/// @param source Источник 
+/// @param n n
+/// @return Назначение, в конец которого скопировано не более n символов из источник
+char* MyStrNCat(char *destination, const char *source, size_t n);
+
 /// @brief Сравнивает 2 строки
 /// @param str1 Строка 1
 /// @param str2  Строка 2
