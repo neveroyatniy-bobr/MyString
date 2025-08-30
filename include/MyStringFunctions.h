@@ -55,11 +55,11 @@ char* MyStrDup(const char *str);
 /// @param str Строка
 /// @param stream Поток
 /// @return -1 при ошибке вывода, иначе количество выведенных символов
-int MyFPuts(const char *str, FILE *stream);
+int MyFPutS(const char *str, FILE *stream);
 
 /// @brief Выводит все символы строки в консоль, но вместо \\0 выводит \\n
 /// @param s Строка
 /// @return -1 при ошибке вывода, иначе количество выведенных символов
-int MyPuts(const char *s);
+int MyPutS(const char *s);
 
 #endif // MY_STRING_FUNCTIONS_H_

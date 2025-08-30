@@ -8,7 +8,7 @@ int main() {
     const char* str = "1237999999";
 
     puts(str);
-    MyPuts(str);
+    MyPutS(str);
 
     return 0;
 }

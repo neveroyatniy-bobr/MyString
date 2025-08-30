@@ -122,7 +122,7 @@ char* MyStrDup(const char *str) {
     return start_ptr;
 }
 
-int MyFPuts(const char *str, FILE *stream) {
+int MyFPutS(const char *str, FILE *stream) {
     int fd = fileno(stream);
     size_t len = MyStrLen(str);
 
@@ -137,7 +137,7 @@ int MyFPuts(const char *str, FILE *stream) {
     return ret == len + 1 ? ret : -1;
 }
 
-int MyPuts(const char *str) {
+int MyPutS(const char *str) {
     size_t len = MyStrLen(str);
 
     int ret = write(STDOUT_FILENO, str, len) / sizeof(*str);
@@ -150,3 +150,4 @@ int MyPuts(const char *str) {
 
     return ret == len + 1 ? ret : -1;
 }
+
