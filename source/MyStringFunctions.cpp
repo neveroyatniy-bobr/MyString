@@ -4,6 +4,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <unistd.h>
 
 const char* MyStrChr(const char* str, int ch) {
     assert(str != NULL);
@@ -119,4 +120,33 @@ char* MyStrDup(const char *str) {
     }
 
     return start_ptr;
+}
+
+int MyFPuts(const char *str, FILE *stream) {
+    int fd = fileno(stream);
+    size_t len = MyStrLen(str);
+
+    int ret = write(fd, str, len) / sizeof(*str);
+
+    if (ret == len) {
+        const char end_line = '\n';
+        write(fd, &(end_line), 1);
+        ret++;
+    }
+
+    return ret == len + 1 ? ret : -1;
+}
+
+int MyPuts(const char *str) {
+    size_t len = MyStrLen(str);
+
+    int ret = write(STDOUT_FILENO, str, len) / sizeof(*str);
+
+    if (ret == len) {
+        const char end_line = '\n';
+        write(STDOUT_FILENO, &(end_line), 1);
+        ret++;
+    }
+
+    return ret == len + 1 ? ret : -1;
 }

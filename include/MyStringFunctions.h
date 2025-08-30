@@ -51,4 +51,15 @@ int MyStrCmp(const char *str1, const char *str2);
 /// @return Указатель на начало дубликата, если места нет возвращает NULL 
 char* MyStrDup(const char *str);
 
+/// @brief Выводит все символы строки в поток, но вместо \\0 выводит \\n
+/// @param str Строка
+/// @param stream Поток
+/// @return -1 при ошибке вывода, иначе количество выведенных символов
+int MyFPuts(const char *str, FILE *stream);
+
+/// @brief Выводит все символы строки в консоль, но вместо \\0 выводит \\n
+/// @param s Строка
+/// @return -1 при ошибке вывода, иначе количество выведенных символов
+int MyPuts(const char *s);
+
 #endif // MY_STRING_FUNCTIONS_H_

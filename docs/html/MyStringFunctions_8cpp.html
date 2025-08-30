@@ -82,6 +82,8 @@ $(function() {
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MyStringFunctions.cpp:</div>
 <div class="dyncontent">
@@ -105,14 +107,77 @@ Functions</h2></td></tr>
 <tr class="memitem:a997f8d762e937bcd7da9a005c4aea01d" id="r_a997f8d762e937bcd7da9a005c4aea01d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a997f8d762e937bcd7da9a005c4aea01d">MyStrCat</a> (char *destination, const char *source)</td></tr>
 <tr class="memdesc:a997f8d762e937bcd7da9a005c4aea01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объединяет 2 строчки копируя источник в конец назначения  <br /></td></tr>
 <tr class="separator:a997f8d762e937bcd7da9a005c4aea01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc6f79b4b7da5c502c9c6d39ef0fed8" id="r_aebc6f79b4b7da5c502c9c6d39ef0fed8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#aebc6f79b4b7da5c502c9c6d39ef0fed8">MyStrNCat</a> (char *destination, const char *source, size_t n)</td></tr>
+<tr class="memdesc:aebc6f79b4b7da5c502c9c6d39ef0fed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирует в конец назначения не более n символов из источника  <br /></td></tr>
+<tr class="separator:aebc6f79b4b7da5c502c9c6d39ef0fed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b6d0f9adddb84424ce4634a20ee493" id="r_a91b6d0f9adddb84424ce4634a20ee493"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a91b6d0f9adddb84424ce4634a20ee493">MyStrCmp</a> (const char *str1, const char *str2)</td></tr>
 <tr class="memdesc:a91b6d0f9adddb84424ce4634a20ee493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнивает 2 строки  <br /></td></tr>
 <tr class="separator:a91b6d0f9adddb84424ce4634a20ee493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42aefe18cab1898dffc938d2e9644ec0" id="r_a42aefe18cab1898dffc938d2e9644ec0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a42aefe18cab1898dffc938d2e9644ec0">MyStrDup</a> (const char *str)</td></tr>
 <tr class="memdesc:a42aefe18cab1898dffc938d2e9644ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дубилирует строку в свобоное место в памяти  <br /></td></tr>
 <tr class="separator:a42aefe18cab1898dffc938d2e9644ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7315eea3e67d1b44ca49607485d7755" id="r_ad7315eea3e67d1b44ca49607485d7755"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#ad7315eea3e67d1b44ca49607485d7755">MyFPuts</a> (const char *str, FILE *stream)</td></tr>
+<tr class="separator:ad7315eea3e67d1b44ca49607485d7755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9134b69dcbd6f3971ff9e8a23e252db" id="r_af9134b69dcbd6f3971ff9e8a23e252db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#af9134b69dcbd6f3971ff9e8a23e252db">MyPuts</a> (const char *str)</td></tr>
+<tr class="memdesc:af9134b69dcbd6f3971ff9e8a23e252db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит все символы строки в консоль, но вместо \0 выводит \n.  <br /></td></tr>
+<tr class="separator:af9134b69dcbd6f3971ff9e8a23e252db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ad7315eea3e67d1b44ca49607485d7755" name="ad7315eea3e67d1b44ca49607485d7755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7315eea3e67d1b44ca49607485d7755">&#9670;&#160;</a></span>MyFPuts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyFPuts </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9134b69dcbd6f3971ff9e8a23e252db" name="af9134b69dcbd6f3971ff9e8a23e252db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9134b69dcbd6f3971ff9e8a23e252db">&#9670;&#160;</a></span>MyPuts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyPuts </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит все символы строки в консоль, но вместо \0 выводит \n. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Строка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 при ошибке вывода, иначе количество выведенных символов </dd></dl>
+
+</div>
+</div>
 <a id="a997f8d762e937bcd7da9a005c4aea01d" name="a997f8d762e937bcd7da9a005c4aea01d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a997f8d762e937bcd7da9a005c4aea01d">&#9670;&#160;</a></span>MyStrCat()</h2>
 
@@ -317,6 +382,51 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Длину строки </dd></dl>
+
+</div>
+</div>
+<a id="aebc6f79b4b7da5c502c9c6d39ef0fed8" name="aebc6f79b4b7da5c502c9c6d39ef0fed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc6f79b4b7da5c502c9c6d39ef0fed8">&#9670;&#160;</a></span>MyStrNCat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * MyStrNCat </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Копирует в конец назначения не более n символов из источника </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>Назначение </td></tr>
+    <tr><td class="paramname">source</td><td>Источник </td></tr>
+    <tr><td class="paramname">n</td><td>n </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Назначение, в конец которого скопировано не более n символов из источник </dd></dl>
 
 </div>
 </div>
