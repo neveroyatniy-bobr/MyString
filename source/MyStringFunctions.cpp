@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 const char* MyStrChr(const char* str, int ch) {
     while (*str != '\0') {
@@ -71,4 +72,14 @@ int MyStrCmp(const char *str1, const char *str2) {
     int sign = signed_ans == 0 ? 0 : signed_ans / abs(signed_ans);
     
     return sign;
+}
+
+char* MyStrDup(const char *str) {
+    char* start_ptr = (char*)malloc(sizeof(*str) * (MyStrLen(str) + 1));
+
+    if (start_ptr != NULL) {
+        MyStrCpy(start_ptr, str);
+    }
+
+    return start_ptr;
 }

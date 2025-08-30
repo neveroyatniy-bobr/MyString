@@ -39,4 +39,9 @@ char* MyStrCat(char *destination, const char *source);
 /// @return Если чтроки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1
 int MyStrCmp(const char *str1, const char *str2);
 
+/// @brief Дубилирует строку в свобоное место в памяти
+/// @param str Строка
+/// @return Указатель на начало дубликата, если места нет возвращает NULL 
+char* MyStrDup(const char *str);
+
 #endif // MY_STRING_FUNCTIONS_H_
