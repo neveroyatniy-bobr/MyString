@@ -5,9 +5,10 @@
 #include "MyStringFunctions.h"
 
 int main() {
-    const char* str = "1237999999";
+    char str[100] = "";
 
-    puts(str);
+    MyFGetS(str, 100, stdin);
+
     MyPutS(str);
 
     return 0;

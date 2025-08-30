@@ -151,3 +151,20 @@ int MyPutS(const char *str) {
     return ret == len + 1 ? ret : -1;
 }
 
+char* MyFGetS(char *str, int n, FILE *stream) {
+    size_t cnt = 0;
+
+    int current_ch = fgetc(stream);
+
+    while (current_ch != EOF && current_ch != '\n' && cnt <= n)
+    {
+        *str = current_ch;
+        cnt++;
+
+        current_ch = fgetc(stream);
+
+        str++;
+    }
+    
+    return cnt == 0 ? NULL : str;
+}

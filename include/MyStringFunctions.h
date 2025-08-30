@@ -62,4 +62,11 @@ int MyFPutS(const char *str, FILE *stream);
 /// @return -1 при ошибке вывода, иначе количество выведенных символов
 int MyPutS(const char *s);
 
+/// @brief Записывает в строку из потока не более n символов до \\n или EOF
+/// @param str Строка
+/// @param n n
+/// @param stream Поток
+/// @return Строку, а в случае ошибки NULL
+char* MyFGetS(char *str, int n, FILE *stream);
+
 #endif // MY_STRING_FUNCTIONS_H_

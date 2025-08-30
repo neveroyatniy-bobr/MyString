@@ -94,9 +94,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2c67aa780f552a82eb1324cb961c1df2" id="r_a2c67aa780f552a82eb1324cb961c1df2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a2c67aa780f552a82eb1324cb961c1df2">MyPuts</a> (const char *s)</td></tr>
-<tr class="memdesc:a2c67aa780f552a82eb1324cb961c1df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит все символы строки в консоль, но вместо \0 выводит \n.  <br /></td></tr>
-<tr class="separator:a2c67aa780f552a82eb1324cb961c1df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a376f3da50c227cc9c3ce105e5dfa2a5f" id="r_a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a376f3da50c227cc9c3ce105e5dfa2a5f">MyStrChr</a> (const char *str, int ch)</td></tr>
 <tr class="memdesc:a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет первое появление символа в строке  <br /></td></tr>
 <tr class="separator:a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,16 +118,108 @@ Functions</h2></td></tr>
 <tr class="memitem:a42aefe18cab1898dffc938d2e9644ec0" id="r_a42aefe18cab1898dffc938d2e9644ec0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a42aefe18cab1898dffc938d2e9644ec0">MyStrDup</a> (const char *str)</td></tr>
 <tr class="memdesc:a42aefe18cab1898dffc938d2e9644ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дубилирует строку в свобоное место в памяти  <br /></td></tr>
 <tr class="separator:a42aefe18cab1898dffc938d2e9644ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef87e7ebb8c2ff898351c06230539799" id="r_aef87e7ebb8c2ff898351c06230539799"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#aef87e7ebb8c2ff898351c06230539799">MyFPutS</a> (const char *str, FILE *stream)</td></tr>
+<tr class="memdesc:aef87e7ebb8c2ff898351c06230539799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит все символы строки в поток, но вместо \0 выводит \n.  <br /></td></tr>
+<tr class="separator:aef87e7ebb8c2ff898351c06230539799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ef8302cf40b3708295c57e0a01f1c0b" id="r_a1ef8302cf40b3708295c57e0a01f1c0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a1ef8302cf40b3708295c57e0a01f1c0b">MyPutS</a> (const char *s)</td></tr>
+<tr class="memdesc:a1ef8302cf40b3708295c57e0a01f1c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит все символы строки в консоль, но вместо \0 выводит \n.  <br /></td></tr>
+<tr class="separator:a1ef8302cf40b3708295c57e0a01f1c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30bfd929614a336c4b604a38d8ede30" id="r_ad30bfd929614a336c4b604a38d8ede30"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#ad30bfd929614a336c4b604a38d8ede30">MyFGetS</a> (char *str, int n, FILE *stream)</td></tr>
+<tr class="memdesc:ad30bfd929614a336c4b604a38d8ede30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает в строку из потока не более n символов до \n или EOF.  <br /></td></tr>
+<tr class="separator:ad30bfd929614a336c4b604a38d8ede30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2c67aa780f552a82eb1324cb961c1df2" name="a2c67aa780f552a82eb1324cb961c1df2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c67aa780f552a82eb1324cb961c1df2">&#9670;&#160;</a></span>MyPuts()</h2>
+<a id="ad30bfd929614a336c4b604a38d8ede30" name="ad30bfd929614a336c4b604a38d8ede30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30bfd929614a336c4b604a38d8ede30">&#9670;&#160;</a></span>MyFGetS()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int MyPuts </td>
+          <td class="memname">char * MyFGetS </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Записывает в строку из потока не более n символов до \n или EOF. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Строка </td></tr>
+    <tr><td class="paramname">n</td><td>n </td></tr>
+    <tr><td class="paramname">stream</td><td>Поток </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Строку, а в случае ошибки NULL </dd></dl>
+
+</div>
+</div>
+<a id="aef87e7ebb8c2ff898351c06230539799" name="aef87e7ebb8c2ff898351c06230539799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef87e7ebb8c2ff898351c06230539799">&#9670;&#160;</a></span>MyFPutS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyFPutS </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит все символы строки в поток, но вместо \0 выводит \n. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Строка </td></tr>
+    <tr><td class="paramname">stream</td><td>Поток </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 при ошибке вывода, иначе количество выведенных символов </dd></dl>
+
+</div>
+</div>
+<a id="a1ef8302cf40b3708295c57e0a01f1c0b" name="a1ef8302cf40b3708295c57e0a01f1c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef8302cf40b3708295c57e0a01f1c0b">&#9670;&#160;</a></span>MyPutS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyPutS </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>s</em></td><td>)</td>
