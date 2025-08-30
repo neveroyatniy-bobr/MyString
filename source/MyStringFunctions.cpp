@@ -168,3 +168,31 @@ char* MyFGetS(char *str, int n, FILE *stream) {
     
     return cnt == 0 ? NULL : str;
 }
+
+ssize_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
+    if (*lineptr == NULL) {
+        *n = 1;
+        *lineptr = (char*)calloc(*n, sizeof(char));
+    }
+
+    size_t cnt = 0;
+
+    int current_ch = fgetc(stream);
+
+    while (current_ch != EOF && current_ch != '\n')
+    {
+        if (cnt == *n) {
+            *n *= 2;
+            *lineptr = (char*)realloc(*lineptr, *n); 
+        }
+
+        *(*lineptr + cnt) = current_ch;
+        cnt++;
+
+        current_ch = fgetc(stream);
+    }
+
+    (*lineptr)[cnt] = '\0';
+
+    return cnt;
+}

@@ -127,6 +127,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad30bfd929614a336c4b604a38d8ede30" id="r_ad30bfd929614a336c4b604a38d8ede30"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#ad30bfd929614a336c4b604a38d8ede30">MyFGetS</a> (char *str, int n, FILE *stream)</td></tr>
 <tr class="memdesc:ad30bfd929614a336c4b604a38d8ede30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает в строку из потока не более n символов до \n или EOF.  <br /></td></tr>
 <tr class="separator:ad30bfd929614a336c4b604a38d8ede30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea0c18a3bd361b8f08a80f1365b7c5e" id="r_aeea0c18a3bd361b8f08a80f1365b7c5e"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#aeea0c18a3bd361b8f08a80f1365b7c5e">MyGetLine</a> (char **lineptr, size_t *n, FILE *stream)</td></tr>
+<tr class="memdesc:aeea0c18a3bd361b8f08a80f1365b7c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает из потока в буффер. Если буффер переполненб может удваивает его размер. Если буффера нетб Создает буффер на 1 символ.  <br /></td></tr>
+<tr class="separator:aeea0c18a3bd361b8f08a80f1365b7c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad30bfd929614a336c4b604a38d8ede30" name="ad30bfd929614a336c4b604a38d8ede30"></a>
@@ -209,6 +212,52 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>-1 при ошибке вывода, иначе количество выведенных символов </dd></dl>
+
+</div>
+</div>
+<a id="aeea0c18a3bd361b8f08a80f1365b7c5e" name="aeea0c18a3bd361b8f08a80f1365b7c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea0c18a3bd361b8f08a80f1365b7c5e">&#9670;&#160;</a></span>MyGetLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t MyGetLine </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>lineptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Записывает из потока в буффер. Если буффер переполненб может удваивает его размер. Если буффера нетб Создает буффер на 1 символ. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineptr</td><td>Буффер </td></tr>
+    <tr><td class="paramname">n</td><td>Размер буффера </td></tr>
+    <tr><td class="paramname">stream</td><td>Поток </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><br  />
+ </dd></dl>
 
 </div>
 </div>

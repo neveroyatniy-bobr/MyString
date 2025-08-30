@@ -69,4 +69,11 @@ int MyPutS(const char *s);
 /// @return Строку, а в случае ошибки NULL
 char* MyFGetS(char *str, int n, FILE *stream);
 
+/// @brief Записывает из потока в буффер. Если буффер переполненб может удваивает его размер. Если буффера нетб Создает буффер на 1 символ.
+/// @param lineptr Буффер
+/// @param n Размер буффера
+/// @param stream Поток
+/// @return 
+ssize_t MyGetLine(char** lineptr, size_t* n, FILE* stream);
+
 #endif // MY_STRING_FUNCTIONS_H_
