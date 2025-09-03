@@ -88,6 +88,22 @@ $(function() {
 Include dependency graph for MyStringFunctions.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="MyStringFunctions_8cpp__incl.png" border="0" usemap="#asource_2MyStringFunctions_8cpp" alt=""/></div>
+<map name="asource_2MyStringFunctions_8cpp" id="asource_2MyStringFunctions_8cpp">
+<area shape="rect" title=" " alt="" coords="208,5,424,31"/>
+<area shape="rect" href="MyStringFunctions_8h.html" title=" " alt="" coords="5,79,160,104"/>
+<area shape="poly" title=" " alt="" coords="279,33,134,77,133,72,278,28"/>
+<area shape="rect" title=" " alt="" coords="107,152,173,177"/>
+<area shape="poly" title=" " alt="" coords="297,33,263,54,226,81,191,113,161,143,157,140,187,109,222,77,260,50,294,29"/>
+<area shape="rect" title=" " alt="" coords="235,79,303,104"/>
+<area shape="poly" title=" " alt="" coords="311,32,287,69,282,66,306,30"/>
+<area shape="rect" title=" " alt="" coords="327,79,398,104"/>
+<area shape="poly" title=" " alt="" coords="326,30,350,66,345,69,321,32"/>
+<area shape="rect" title=" " alt="" coords="423,79,497,104"/>
+<area shape="poly" title=" " alt="" coords="340,28,425,70,423,75,338,33"/>
+<area shape="rect" title=" " alt="" coords="521,79,596,104"/>
+<area shape="poly" title=" " alt="" coords="356,28,509,73,507,78,354,33"/>
+<area shape="poly" title=" " alt="" coords="94,103,124,139,120,143,90,106"/>
+</map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -125,9 +141,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad30bfd929614a336c4b604a38d8ede30" id="r_ad30bfd929614a336c4b604a38d8ede30"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#ad30bfd929614a336c4b604a38d8ede30">MyFGetS</a> (char *str, int n, FILE *stream)</td></tr>
 <tr class="memdesc:ad30bfd929614a336c4b604a38d8ede30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает в строку из потока не более n символов до \n или EOF.  <br /></td></tr>
 <tr class="separator:ad30bfd929614a336c4b604a38d8ede30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeea0c18a3bd361b8f08a80f1365b7c5e" id="r_aeea0c18a3bd361b8f08a80f1365b7c5e"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#aeea0c18a3bd361b8f08a80f1365b7c5e">MyGetLine</a> (char **lineptr, size_t *n, FILE *stream)</td></tr>
-<tr class="memdesc:aeea0c18a3bd361b8f08a80f1365b7c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает из потока в буффер. Если буффер переполненб может удваивает его размер. Если буффера нетб Создает буффер на 1 символ.  <br /></td></tr>
-<tr class="separator:aeea0c18a3bd361b8f08a80f1365b7c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288ad759e4b529dc861d83fab1054b07" id="r_a288ad759e4b529dc861d83fab1054b07"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a288ad759e4b529dc861d83fab1054b07">MyGetLine</a> (char **lineptr, size_t *n, FILE *stream)</td></tr>
+<tr class="memdesc:a288ad759e4b529dc861d83fab1054b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает из потока в буффер. Если буффер переполненб может удваивает его размер. Если буффера нетб Создает буффер на 1 символ.  <br /></td></tr>
+<tr class="separator:a288ad759e4b529dc861d83fab1054b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad30bfd929614a336c4b604a38d8ede30" name="ad30bfd929614a336c4b604a38d8ede30"></a>
@@ -213,14 +229,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aeea0c18a3bd361b8f08a80f1365b7c5e" name="aeea0c18a3bd361b8f08a80f1365b7c5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeea0c18a3bd361b8f08a80f1365b7c5e">&#9670;&#160;</a></span>MyGetLine()</h2>
+<a id="a288ad759e4b529dc861d83fab1054b07" name="a288ad759e4b529dc861d83fab1054b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288ad759e4b529dc861d83fab1054b07">&#9670;&#160;</a></span>MyGetLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ssize_t MyGetLine </td>
+          <td class="memname">size_t MyGetLine </td>
           <td>(</td>
           <td class="paramtype">char **&#160;</td>
           <td class="paramname"><em>lineptr</em>, </td>
@@ -254,8 +270,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><br  />
- </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Количество считанных символовй </dd></dl>
 
 </div>
 </div>

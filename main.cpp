@@ -15,5 +15,12 @@ int main() {
 
     free(str);
 
+    char str_to_copy[100];
+    memset(str_to_copy, '1', 100);
+
+    char str_copy_from[] = "lolol";
+
+    MyStrCpy(str_to_copy, str_copy_from);
+
     return 0;
 }

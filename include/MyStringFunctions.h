@@ -73,7 +73,7 @@ char* MyFGetS(char *str, int n, FILE *stream);
 /// @param lineptr Буффер
 /// @param n Размер буффера
 /// @param stream Поток
-/// @return 
-ssize_t MyGetLine(char** lineptr, size_t* n, FILE* stream);
+/// @return Количество считанных символовй
+size_t MyGetLine(char** lineptr, size_t* n, FILE* stream);
 
 #endif // MY_STRING_FUNCTIONS_H_

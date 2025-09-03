@@ -65,6 +65,12 @@ char* MyStrNCpy(char* destination, const char* source, size_t n) {
         source++;
         cnt++;
     }
+
+    if (cnt < n) {
+        for (size_t i = 0; i < n - cnt; i++) {
+            *destination = '\0';
+        }
+    }
     
     return destination_copy;
 }
@@ -84,15 +90,14 @@ char* MyStrNCat(char *destination, const char *source, size_t n) {
 
     size_t dst_len = MyStrLen(destination);
     size_t src_len = MyStrLen(source);
-    size_t len = src_len + dst_len;
 
     char* ret = MyStrNCpy(destination + dst_len, source, n) - dst_len;
 
-    if (*(ret + len) != '\0') {
-        *(ret + len) = 0;
+    if (src_len >= n) {
+        *(ret + dst_len + n - 1) = 0;
     }
 
-    return ret;
+    return ret; 
 }
 
 int MyStrCmp(const char *str1, const char *str2) {
@@ -105,7 +110,9 @@ int MyStrCmp(const char *str1, const char *str2) {
     }
     
     int signed_ans = *str1 - *str2;
-    int sign = signed_ans == 0 ? 0 : signed_ans / abs(signed_ans);
+    int sign = (signed_ans == 0) 
+                    ? 0 
+                    : signed_ans / abs(signed_ans);
     
     return sign;
 }
@@ -113,7 +120,7 @@ int MyStrCmp(const char *str1, const char *str2) {
 char* MyStrDup(const char *str) {
     assert(str != NULL);
 
-    char* start_ptr = (char*)calloc((MyStrLen(str) + 1), sizeof(*str));
+    char* start_ptr = (char*)calloc((MyStrLen(str) + sizeof('\0')), sizeof(*str));
 
     if (start_ptr != NULL) {
         MyStrCpy(start_ptr, str);
@@ -123,42 +130,45 @@ char* MyStrDup(const char *str) {
 }
 
 int MyFPutS(const char *str, FILE *stream) {
-    int fd = fileno(stream);
+    assert(str != NULL);
+    assert(stream != NULL);
+
     size_t len = MyStrLen(str);
 
-    int ret = write(fd, str, len) / sizeof(*str);
+    size_t bytes_written = 0;
+    bool is_EOF = false;
 
-    if (ret == len) {
-        const char end_line = '\n';
-        write(fd, &(end_line), 1);
-        ret++;
+    for (size_t i = 0; i < len; i++) {
+        is_EOF = fputc(str[i], stream) == EOF ? true : is_EOF;
+
+        bytes_written++;
     }
 
-    return ret == len + 1 ? ret : -1;
+    if (bytes_written == len) {
+        fputc('\n', stream);
+        bytes_written++;
+    }
+
+    return is_EOF ? EOF : (int)bytes_written;
 }
 
 int MyPutS(const char *str) {
-    size_t len = MyStrLen(str);
+    assert(str != NULL);
 
-    int ret = write(STDOUT_FILENO, str, len) / sizeof(*str);
-
-    if (ret == len) {
-        const char end_line = '\n';
-        write(STDOUT_FILENO, &(end_line), 1);
-        ret++;
-    }
-
-    return ret == len + 1 ? ret : -1;
+    return MyFPutS(str, stdout);
 }
 
 char* MyFGetS(char *str, int n, FILE *stream) {
-    size_t cnt = 0;
+    assert(str != NULL);
+    assert(stream != NULL);
+
+    int cnt = 0;
 
     int current_ch = fgetc(stream);
 
     while (current_ch != EOF && current_ch != '\n' && cnt <= n)
     {
-        *str = current_ch;
+        *str = (char)current_ch;
         cnt++;
 
         current_ch = fgetc(stream);
@@ -169,7 +179,10 @@ char* MyFGetS(char *str, int n, FILE *stream) {
     return cnt == 0 ? NULL : str;
 }
 
-ssize_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
+size_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
+    assert(lineptr != NULL);
+    assert(stream != NULL);
+
     if (*lineptr == NULL) {
         *n = 1;
         *lineptr = (char*)calloc(*n, sizeof(char));
@@ -186,13 +199,14 @@ ssize_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
             *lineptr = (char*)realloc(*lineptr, *n); 
         }
 
-        *(*lineptr + cnt) = current_ch;
+        *(*lineptr + cnt) = (char)current_ch;
         cnt++;
 
         current_ch = fgetc(stream);
     }
 
     (*lineptr)[cnt] = '\0';
+    cnt++;
 
     return cnt;
 }
