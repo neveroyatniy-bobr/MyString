@@ -6,6 +6,18 @@
 #include <assert.h>
 #include <unistd.h>
 
+int MyClamp(int n, int n_min, int n_max) {
+    if (n < n_min) {
+        return n_min;
+    }
+    else if (n > n_max) {
+        return n_max;
+    }
+    else {
+        return n;
+    }
+}
+
 const char* MyStrChr(const char* str, int ch) {
     assert(str != NULL);
 
@@ -209,4 +221,51 @@ size_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
     cnt++;
 
     return cnt;
+}
+
+char* MyStrStr(const char* haystack, const char* needle) {
+    assert(haystack != NULL);
+    assert(needle != NULL);
+
+    const int char_number = 256;
+    int last_mention[char_number];
+    for (int i = 0; i < char_number; i++) {
+        last_mention[i] = -1;
+    }
+
+    const char* start_needle = needle;
+    const char* start_haystack = haystack;
+    size_t needle_len = 0;
+    size_t haystack_len = MyStrLen(haystack);
+
+    while (*needle != '\0') {
+        last_mention[(int)*needle] = (int)needle_len;
+        needle++;
+        needle_len++;
+    }
+
+    const char* needle_end = start_needle + (needle_len - 1);
+
+    needle = needle_end;
+    haystack += (needle_len - 1);
+    while (*haystack != '\0' && needle != start_needle) {
+        if (*needle == *haystack) {
+            needle--;
+            haystack--;
+        }
+        else {
+            haystack += (needle_end - needle);
+            needle = needle_end;
+
+            int step = (int)needle_len - 1 - last_mention[(int)*haystack];
+            haystack += MyClamp(step, 1, (int)haystack_len - 1 - (int)(haystack - start_haystack));
+        }
+    }
+    
+    if (*haystack == '\0') {
+        return NULL;
+    } 
+    else {
+        return *haystack == *needle ? (char*)haystack : NULL;
+    }
 }

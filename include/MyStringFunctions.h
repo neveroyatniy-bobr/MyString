@@ -3,6 +3,13 @@
 
 #include <stdio.h>
 
+/// @brief Находит ближайшее к n число в диапазоне
+/// @param n n
+/// @param n_min Начало диапазона 
+/// @param n_max Конец диапазона
+/// @return Ближайшее к n число в диапазоне
+int MyClamp(int n, int n_min, int n_max);
+
 /// @brief Ищет первое появление символа в строке
 /// @param str Строка
 /// @param ch Символ
@@ -75,5 +82,11 @@ char* MyFGetS(char *str, int n, FILE *stream);
 /// @param stream Поток
 /// @return Количество считанных символовй
 size_t MyGetLine(char** lineptr, size_t* n, FILE* stream);
+
+/// @brief Ищет подстроку в строке
+/// @param haystack строка
+/// @param needle подстрока
+/// @return указатель на первое упоминание строки
+char* MyStrStr(const char *haystack, const char *needle);
 
 #endif // MY_STRING_FUNCTIONS_H_
