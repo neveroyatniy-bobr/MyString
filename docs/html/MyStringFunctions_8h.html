@@ -109,12 +109,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ad2fcc2ea65169dbb12ef912c925ac1e1" id="r_ad2fcc2ea65169dbb12ef912c925ac1e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#ad2fcc2ea65169dbb12ef912c925ac1e1">MyClamp</a> (int n, int n_min, int n_max)</td></tr>
 <tr class="memdesc:ad2fcc2ea65169dbb12ef912c925ac1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Находит ближайшее к n число в диапазоне  <br /></td></tr>
 <tr class="separator:ad2fcc2ea65169dbb12ef912c925ac1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebeebf35073f301df14d00bbf19eb0d" id="r_a5ebeebf35073f301df14d00bbf19eb0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a5ebeebf35073f301df14d00bbf19eb0d">MyPow</a> (int x, int n)</td></tr>
+<tr class="memdesc:a5ebeebf35073f301df14d00bbf19eb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возводит x в степень n.  <br /></td></tr>
+<tr class="separator:a5ebeebf35073f301df14d00bbf19eb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a376f3da50c227cc9c3ce105e5dfa2a5f" id="r_a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a376f3da50c227cc9c3ce105e5dfa2a5f">MyStrChr</a> (const char *str, int ch)</td></tr>
 <tr class="memdesc:a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет первое появление символа в строке  <br /></td></tr>
 <tr class="separator:a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb56a205e8fcaf1af986c682690d3c3" id="r_aecb56a205e8fcaf1af986c682690d3c3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#aecb56a205e8fcaf1af986c682690d3c3">MyStrLen</a> (const char *str)</td></tr>
 <tr class="memdesc:aecb56a205e8fcaf1af986c682690d3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет длину строки без нуль-терминатора  <br /></td></tr>
 <tr class="separator:aecb56a205e8fcaf1af986c682690d3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d7c2c4fa54c31aa877e597956c2b86" id="r_ae3d7c2c4fa54c31aa877e597956c2b86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#ae3d7c2c4fa54c31aa877e597956c2b86">MyAToI</a> (const char *nptr)</td></tr>
+<tr class="memdesc:ae3d7c2c4fa54c31aa877e597956c2b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переводит строку в int.  <br /></td></tr>
+<tr class="separator:ae3d7c2c4fa54c31aa877e597956c2b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf15d8298456a5e4d6c2af9a5f7c41ed" id="r_abf15d8298456a5e4d6c2af9a5f7c41ed"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#abf15d8298456a5e4d6c2af9a5f7c41ed">MyStrCpy</a> (char *destination, const char *source)</td></tr>
 <tr class="memdesc:abf15d8298456a5e4d6c2af9a5f7c41ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирует строку из источника в назначение  <br /></td></tr>
 <tr class="separator:abf15d8298456a5e4d6c2af9a5f7c41ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +156,33 @@ Functions</h2></td></tr>
 <tr class="separator:a1ea53f38b85c81d39671e20d38c8a116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ae3d7c2c4fa54c31aa877e597956c2b86" name="ae3d7c2c4fa54c31aa877e597956c2b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d7c2c4fa54c31aa877e597956c2b86">&#9670;&#160;</a></span>MyAToI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyAToI </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Переводит строку в int. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>Строка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Число </dd></dl>
+
+</div>
+</div>
 <a id="ad2fcc2ea65169dbb12ef912c925ac1e1" name="ad2fcc2ea65169dbb12ef912c925ac1e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2fcc2ea65169dbb12ef912c925ac1e1">&#9670;&#160;</a></span>MyClamp()</h2>
 
@@ -320,6 +353,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Количество считанных символовй </dd></dl>
+
+</div>
+</div>
+<a id="a5ebeebf35073f301df14d00bbf19eb0d" name="a5ebeebf35073f301df14d00bbf19eb0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebeebf35073f301df14d00bbf19eb0d">&#9670;&#160;</a></span>MyPow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyPow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возводит x в степень n. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x </td></tr>
+    <tr><td class="paramname">n</td><td>n </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>x^n </dd></dl>
 
 </div>
 </div>

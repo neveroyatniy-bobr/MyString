@@ -18,6 +18,16 @@ int MyClamp(int n, int n_min, int n_max) {
     }
 }
 
+int MyPow(int x, int n) {
+    int ans = 1;
+
+    for (int i = 0; i < n; i++) {
+        ans *= x;
+    }
+
+    return ans;
+}
+
 const char* MyStrChr(const char* str, int ch) {
     assert(str != NULL);
 
@@ -43,6 +53,32 @@ size_t MyStrLen(const char* str) {
     }
 
     return len;
+}
+
+int MyAToI(const char *nptr) {
+    int n = 0;
+    size_t len = MyStrLen(nptr);
+    
+    bool is_signed = (nptr[0] == '+' || nptr[0] == '-');
+    bool is_ok = true;
+    for (int i = (int)is_signed; i < len; i++) {
+        is_ok = ('0' <= nptr[i] && nptr[i] <= '9')
+              ? is_ok
+              : false;
+    }
+
+    if (is_ok) {
+        for (int i = (int)is_signed; i < len; i++) {
+            n += (nptr[i] - '0') * MyPow(10, len - 1 - i);
+        }
+    }
+    else {
+        n = 0;
+    }
+    
+    return is_signed
+         ? n * (nptr[0] == '+' ? 1 : -1)
+         : n;
 }
 
 char* MyStrCpy(char* destination, const char* source) {

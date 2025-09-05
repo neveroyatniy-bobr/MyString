@@ -10,6 +10,12 @@
 /// @return Ближайшее к n число в диапазоне
 int MyClamp(int n, int n_min, int n_max);
 
+/// @brief Возводит x в степень n
+/// @param x x
+/// @param n n
+/// @return x^n
+int MyPow(int x, int n);
+
 /// @brief Ищет первое появление символа в строке
 /// @param str Строка
 /// @param ch Символ
@@ -20,6 +26,11 @@ const char* MyStrChr(const char* str, int ch);
 /// @param str Строка
 /// @return Длину строки
 size_t MyStrLen(const char* str);
+
+/// @brief Переводит строку в int
+/// @param nptr Строка
+/// @return Число
+int MyAToI(const char *nptr);
 
 /// @brief Копирует строку из источника в назначение
 /// @param destination Назначение

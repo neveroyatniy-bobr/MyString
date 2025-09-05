@@ -5,9 +5,9 @@
 #include "MyStringFunctions.h"
 
 int main() {
-    const char* s = "ladsgjkhhhljkasfhjklsHELLOfahjkladsgkhjkladgshjkladgs";
+    const char* s = "+1000";
 
-    puts(MyStrStr(s, "HELLO"));
+    printf("%d", MyAToI(s));
 
     return 0;
 }
