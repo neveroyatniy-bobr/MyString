@@ -10,6 +10,16 @@
 /// @return Ближайшее к n число в диапазоне
 int MyClamp(int n, int n_min, int n_max);
 
+/// @brief Проверяет, является ли символ цифрой
+/// @param symbol символ
+/// @return true, если является цифрой, иначе false
+bool MyIsDigit(const char symbol);
+
+/// @brief Проверяет, является ли символ знаком
+/// @param symbol символ
+/// @return true, если является знаком, иначе false
+bool MyIsSign(const char symbol);
+
 /// @brief Возводит x в степень n
 /// @param x x
 /// @param n n

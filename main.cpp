@@ -5,7 +5,7 @@
 #include "MyStringFunctions.h"
 
 int main() {
-    const char* s = "+1000";
+    const char* s = "999000";
 
     printf("%d", MyAToI(s));
 

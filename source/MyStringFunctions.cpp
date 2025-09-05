@@ -19,13 +19,24 @@ int MyClamp(int n, int n_min, int n_max) {
 }
 
 int MyPow(int x, int n) {
-    int ans = 1;
+    assert(n >= 0);
 
-    for (int i = 0; i < n; i++) {
-        ans *= x;
+    if (n == 0) { return 1; }
+    else if (n == 1) { return x; }
+    else {
+        int first_half = n / 2;
+        int second_half = n - first_half;
+
+        return MyPow(x, first_half) * MyPow(x, second_half);
     }
+}
 
-    return ans;
+bool MyIsDigit(const char symbol) {
+    return '0' <= symbol && symbol <= '9'; 
+}
+
+bool MyIsSign(const char symbol) {
+    return symbol == '+' || symbol == '-';
 }
 
 const char* MyStrChr(const char* str, int ch) {
@@ -56,20 +67,23 @@ size_t MyStrLen(const char* str) {
 }
 
 int MyAToI(const char *nptr) {
+    assert(nptr != NULL);
+
     int n = 0;
     size_t len = MyStrLen(nptr);
     
-    bool is_signed = (nptr[0] == '+' || nptr[0] == '-');
+    bool is_signed = (MyIsSign(nptr[0]));
     bool is_ok = true;
-    for (int i = (int)is_signed; i < len; i++) {
-        is_ok = ('0' <= nptr[i] && nptr[i] <= '9')
+    for (size_t i = (size_t)is_signed; i < len; i++) {
+        is_ok = (MyIsDigit(nptr[i]))
               ? is_ok
               : false;
     }
 
     if (is_ok) {
-        for (int i = (int)is_signed; i < len; i++) {
-            n += (nptr[i] - '0') * MyPow(10, len - 1 - i);
+        for (size_t i = (size_t)is_signed; i < len; i++) {
+            n *= 10;
+            n += (nptr[i] - '0');
         }
     }
     else {
@@ -77,8 +91,8 @@ int MyAToI(const char *nptr) {
     }
     
     return is_signed
-         ? n * (nptr[0] == '+' ? 1 : -1)
-         : n;
+                ? n * (nptr[0] == '+' ? 1 : -1)
+                : n;
 }
 
 char* MyStrCpy(char* destination, const char* source) {
