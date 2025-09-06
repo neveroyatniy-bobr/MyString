@@ -39,18 +39,18 @@ bool MyIsSign(const char symbol) {
     return symbol == '+' || symbol == '-';
 }
 
-const char* MyStrChr(const char* str, int ch) {
+char* MyStrChr(const char* str, int ch) {
     assert(str != NULL);
 
     while (*str != '\0') {
         if (*str == ch) {
-            return str;
+            return (char*)str;
         }
 
         str++;
     }
 
-    return (ch == 0) ? str : NULL;
+    return (ch == '\0') ? (char*)str : NULL;
 }
 
 const char* MyStrRChr(const char* str, int ch) {

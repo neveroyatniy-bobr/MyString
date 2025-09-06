@@ -30,7 +30,7 @@ int MyPow(int x, int n);
 /// @param str Строка
 /// @param ch Символ
 /// @return Указатель на символ в строке
-const char* MyStrChr(const char* str, int ch);
+char* MyStrChr(const char* str, int ch);
 
 /// @brief Ищет последнее появление символа в строке
 /// @param str Строка
