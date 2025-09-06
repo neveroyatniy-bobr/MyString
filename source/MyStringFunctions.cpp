@@ -24,15 +24,15 @@ int MyPow(int x, int n) {
     if (n == 0) { return 1; }
     else if (n == 1) { return x; }
     else {
-        int first_half = n / 2;
-        int second_half = n - first_half;
-
-        return MyPow(x, first_half) * MyPow(x, second_half);
+        int half = MyPow(x, n / 2);
+        return n % 2 == 0 
+             ? half * half
+             : half * half * x;
     }
 }
 
 bool MyIsDigit(const char symbol) {
-    return '0' <= symbol && symbol <= '9'; 
+    return '0' <= symbol && symbol <= '9';
 }
 
 bool MyIsSign(const char symbol) {
