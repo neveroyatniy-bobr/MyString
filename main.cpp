@@ -7,7 +7,7 @@
 int main() {
     const char* s = "fahdpfaaphapahfdhdfshphfafaddd";
 
-    puts(MyStrRChr(s, 'a'));
+    puts(MyStrRChr(s, 0));
 
     return 0;
 }

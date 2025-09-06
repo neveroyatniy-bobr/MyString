@@ -52,21 +52,22 @@ char* MyStrChr(const char* str, int ch) {
 
     return (ch == '\0') ? (char*)str : NULL;
 }
-
-const char* MyStrRChr(const char* str, int ch) {
+char* MyStrRChr(const char* str, int ch) {
     assert(str != NULL);
 
-    const char* last_mention = 0;
+    char* last_mention = 0;
     while (*str != '\0')
     {
         last_mention = *str == ch 
-                     ? str 
+                     ? (char*)str 
                      : last_mention;
         
         str++;
     }
 
-    return last_mention; 
+    return ch == '\0'
+         ? (char*)str
+         : last_mention; 
 }
 
 size_t MyStrLen(const char* str) {
