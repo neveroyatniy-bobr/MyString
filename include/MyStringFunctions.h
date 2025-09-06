@@ -20,6 +20,11 @@ bool MyIsDigit(const char symbol);
 /// @return true, если является знаком, иначе false
 bool MyIsSign(const char symbol);
 
+/// @brief Проверяет, является ли символ пробелом
+/// @param symbol символ
+/// @return true, если является пробелом, иначе false
+bool MyIsSpace(const char symbol);
+
 /// @brief Возводит x в степень 
 /// @param x x
 /// @param n n

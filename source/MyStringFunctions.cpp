@@ -39,6 +39,10 @@ bool MyIsSign(const char symbol) {
     return symbol == '+' || symbol == '-';
 }
 
+bool MyIsSpace(const char symbol) {
+    return symbol == ' ';
+}
+
 char* MyStrChr(const char* str, int ch) {
     assert(str != NULL);
 
@@ -86,26 +90,35 @@ size_t MyStrLen(const char* str) {
 int MyAToI(const char *nptr) {
     assert(nptr != NULL);
 
+    while (MyIsSpace(*nptr)) {
+        nptr++;
+    }
+
     int n = 0;
     size_t len = MyStrLen(nptr);
     
-    bool is_signed = (MyIsSign(nptr[0]));
+    bool is_signed = MyIsSign(*nptr);
+    int sign = *nptr == '-' 
+                      ? -1 
+                      :  1;
+    nptr += (int)is_signed;
+
     bool is_ok = true;
-    for (size_t i = (size_t)is_signed; i < len; i++) {
-        is_ok = (MyIsDigit(nptr[i]))
+
+    while (*nptr != '\0' && is_ok) {
+        is_ok = (MyIsDigit(*nptr))
               ? is_ok
               : false;
+
+        n *= 10;
+        n += (*nptr - '0');
+        
+        nptr++;
     }
 
-    if (is_ok) {
-        for (size_t i = (size_t)is_signed; i < len; i++) {
-            n *= 10;
-            n += (nptr[i] - '0');
-        }
-    }
-    else {
-        n = 0;
-    }
+    n = is_ok 
+      ? n 
+      : 0;
     
     return is_signed
                 ? n * (nptr[0] == '+' ? 1 : -1)
@@ -214,38 +227,43 @@ int MyFPutS(const char *str, FILE *stream) {
 
     size_t len = MyStrLen(str);
 
-    size_t bytes_written = 0;
+    size_t bytes_writen = 0;
     bool is_EOF = false;
 
     for (size_t i = 0; i < len; i++) {
         is_EOF = fputc(str[i], stream) == EOF ? true : is_EOF;
 
-        bytes_written++;
+        bytes_writen++;
     }
 
-    if (bytes_written == len) {
-        fputc('\n', stream);
-        bytes_written++;
-    }
-
-    return is_EOF ? EOF : (int)bytes_written;
+    return is_EOF ? EOF : (int)bytes_writen;
 }
 
 int MyPutS(const char *str) {
     assert(str != NULL);
 
-    return MyFPutS(str, stdout);
+    int bytes_writen = MyFPutS(str, stdout);
+    fputc('\n', stdout);
+    bytes_writen++;
+
+    return bytes_writen;
 }
 
 char* MyFGetS(char *str, int n, FILE *stream) {
     assert(str != NULL);
     assert(stream != NULL);
 
+    char* start_str = str;
+
+    if (n == 0) {
+        return NULL;
+    }
+
     int cnt = 0;
 
     int current_ch = fgetc(stream);
 
-    while (current_ch != EOF && current_ch != '\n' && cnt <= n)
+    while (current_ch != EOF && current_ch != '\n' && cnt <  n - 1)
     {
         *str = (char)current_ch;
         cnt++;
@@ -254,17 +272,26 @@ char* MyFGetS(char *str, int n, FILE *stream) {
 
         str++;
     }
+
+    *str = '\0';
     
-    return cnt == 0 ? NULL : str;
+    return cnt == 0 ? NULL : start_str;
 }
 
 size_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
     assert(lineptr != NULL);
     assert(stream != NULL);
+    assert(n != NULL);
 
-    if (*lineptr == NULL) {
-        *n = 1;
-        *lineptr = (char*)calloc(*n, sizeof(char));
+    int default_size = 16;
+    int grow_factor = 2;
+
+    char* linestr = *lineptr;
+    size_t size = *n;
+
+    if (linestr == NULL) {
+        size = default_size;
+        linestr = (char*)calloc(size, sizeof(char));
     }
 
     size_t cnt = 0;
@@ -273,19 +300,22 @@ size_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
 
     while (current_ch != EOF && current_ch != '\n')
     {
-        if (cnt == *n) {
-            *n *= 2;
-            *lineptr = (char*)realloc(*lineptr, *n); 
+        if (cnt == size - 1) {
+            size *= (size_t)grow_factor;
+            linestr = (char*)realloc(linestr, size); 
         }
 
-        *(*lineptr + cnt) = (char)current_ch;
+        linestr[cnt] = (char)current_ch;
         cnt++;
 
         current_ch = fgetc(stream);
     }
 
-    (*lineptr)[cnt] = '\0';
+    (linestr)[cnt] = '\0';
     cnt++;
+
+    *n = size;
+    *lineptr = linestr;
 
     return cnt;
 }

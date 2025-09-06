@@ -5,9 +5,14 @@
 #include "MyStringFunctions.h"
 
 int main() {
-    const char* s = "fahdpfaaphapahfdhdfshphfafaddd";
+    char* s = NULL;
+    size_t  n = 0;
 
-    puts(MyStrRChr(s, 0));
+    MyGetLine(&s, &n, stdin);
+
+    MyPutS(s);
+
+    free(s);
 
     return 0;
 }
