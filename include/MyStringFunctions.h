@@ -20,7 +20,7 @@ bool MyIsDigit(const char symbol);
 /// @return true, если является знаком, иначе false
 bool MyIsSign(const char symbol);
 
-/// @brief Возводит x в степень n
+/// @brief Возводит x в степень 
 /// @param x x
 /// @param n n
 /// @return x^n
@@ -31,6 +31,12 @@ int MyPow(int x, int n);
 /// @param ch Символ
 /// @return Указатель на символ в строке
 const char* MyStrChr(const char* str, int ch);
+
+/// @brief Ищет последнее появление символа в строке
+/// @param str Строка
+/// @param ch Символ
+/// @return Указатель на символ в строке
+const char* MyStrRChr(const char* str, int ch);
 
 /// @brief Ищет длину строки без нуль-терминатора
 /// @param str Строка

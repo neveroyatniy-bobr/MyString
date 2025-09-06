@@ -5,9 +5,9 @@
 #include "MyStringFunctions.h"
 
 int main() {
-    const char* s = "999000";
+    const char* s = "fahdpfaaphapahfdhdfshphfafaddd";
 
-    printf("%d", MyAToI(s));
+    puts(MyStrRChr(s, 'a'));
 
     return 0;
 }

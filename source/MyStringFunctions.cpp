@@ -53,6 +53,22 @@ const char* MyStrChr(const char* str, int ch) {
     return (ch == 0) ? str : NULL;
 }
 
+const char* MyStrRChr(const char* str, int ch) {
+    assert(str != NULL);
+
+    const char* last_mention = 0;
+    while (*str != '\0')
+    {
+        last_mention = *str == ch 
+                     ? str 
+                     : last_mention;
+        
+        str++;
+    }
+
+    return last_mention; 
+}
+
 size_t MyStrLen(const char* str) {
     assert(str != NULL);
 
@@ -278,7 +294,7 @@ char* MyStrStr(const char* haystack, const char* needle) {
     assert(needle != NULL);
 
     const int char_number = 256;
-    int last_mention[char_number];
+    int last_mention[char_number] = {};
     for (int i = 0; i < char_number; i++) {
         last_mention[i] = -1;
     }

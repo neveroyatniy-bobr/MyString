@@ -112,7 +112,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad2fcc2ea65169dbb12ef912c925ac1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Находит ближайшее к n число в диапазоне  <br /></td></tr>
 <tr class="separator:ad2fcc2ea65169dbb12ef912c925ac1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ebeebf35073f301df14d00bbf19eb0d" id="r_a5ebeebf35073f301df14d00bbf19eb0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a5ebeebf35073f301df14d00bbf19eb0d">MyPow</a> (int x, int n)</td></tr>
-<tr class="memdesc:a5ebeebf35073f301df14d00bbf19eb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возводит x в степень n.  <br /></td></tr>
+<tr class="memdesc:a5ebeebf35073f301df14d00bbf19eb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возводит x в степень  <br /></td></tr>
 <tr class="separator:a5ebeebf35073f301df14d00bbf19eb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310de83840eb2f08cb91a0f3a0cc0e78" id="r_a310de83840eb2f08cb91a0f3a0cc0e78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a310de83840eb2f08cb91a0f3a0cc0e78">MyIsDigit</a> (const char symbol)</td></tr>
 <tr class="memdesc:a310de83840eb2f08cb91a0f3a0cc0e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, является ли символ цифрой  <br /></td></tr>
@@ -123,6 +123,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a376f3da50c227cc9c3ce105e5dfa2a5f" id="r_a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a376f3da50c227cc9c3ce105e5dfa2a5f">MyStrChr</a> (const char *str, int ch)</td></tr>
 <tr class="memdesc:a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет первое появление символа в строке  <br /></td></tr>
 <tr class="separator:a376f3da50c227cc9c3ce105e5dfa2a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc67bb4c2f5d47e9b0090774b8d982f" id="r_a8cc67bb4c2f5d47e9b0090774b8d982f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#a8cc67bb4c2f5d47e9b0090774b8d982f">MyStrRChr</a> (const char *str, int ch)</td></tr>
+<tr class="memdesc:a8cc67bb4c2f5d47e9b0090774b8d982f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет последнее появление символа в строке  <br /></td></tr>
+<tr class="separator:a8cc67bb4c2f5d47e9b0090774b8d982f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb56a205e8fcaf1af986c682690d3c3" id="r_aecb56a205e8fcaf1af986c682690d3c3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8cpp.html#aecb56a205e8fcaf1af986c682690d3c3">MyStrLen</a> (const char *str)</td></tr>
 <tr class="memdesc:aecb56a205e8fcaf1af986c682690d3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет длину строки без нуль-терминатора  <br /></td></tr>
 <tr class="separator:aecb56a205e8fcaf1af986c682690d3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -444,7 +447,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Возводит x в степень n. </p>
+<p>Возводит x в степень </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x </td></tr>
@@ -777,6 +780,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Назначение </dd></dl>
+
+</div>
+</div>
+<a id="a8cc67bb4c2f5d47e9b0090774b8d982f" name="a8cc67bb4c2f5d47e9b0090774b8d982f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc67bb4c2f5d47e9b0090774b8d982f">&#9670;&#160;</a></span>MyStrRChr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * MyStrRChr </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ищет последнее появление символа в строке </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Строка </td></tr>
+    <tr><td class="paramname">ch</td><td>Символ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Указатель на символ в строке </dd></dl>
 
 </div>
 </div>
