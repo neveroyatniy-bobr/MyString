@@ -10,14 +10,14 @@ typedef int* (*LinePointer)(int* array2d, size_t line_num, size_t line_size);
 /// @param line_size Максимальная длина строки
 /// @param array2d 2мерный массив
 /// @return Указатель на начало строки
-int* RectLinePointer(int* array2d, size_t line_num, size_t line_size);
+int* RectLinePointer(int* array_2d, size_t line_num, size_t line_size);
 
 /// @brief Вычисляет указатель на начало строки в 2мерном треугольном массиве масивве
 /// @param line_num Номер строки
 /// @param line_size Максимальная длина строки
 /// @param array2d 2мерный массив
 /// @return Указатель на начало строки
-int* TriangleLinePointer(int* array2d, size_t line_num, size_t line_size);
+int* TriangleLinePointer(int* array_2d, size_t line_num, size_t line_size);
 
 /// @brief Вычисляет указатель на элемент в i строке и j столбце 2мерного массива 
 /// @param array_2d 2мерный массив
