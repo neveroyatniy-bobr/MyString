@@ -74,6 +74,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">My2DArrayFunctions.h File Reference</div></div>
 </div><!--header-->
@@ -104,17 +105,101 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="My2DArrayFunctions_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:acc975e5ae0d6174f13a37de56cecba92" id="r_acc975e5ae0d6174f13a37de56cecba92"><td class="memItemLeft" align="right" valign="top">typedef int *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#acc975e5ae0d6174f13a37de56cecba92">LinePointer</a>) (int *array2d, size_t line_num, size_t line_size)</td></tr>
+<tr class="separator:acc975e5ae0d6174f13a37de56cecba92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a23132b9e6f914a087475bfca0b73f60a" id="r_a23132b9e6f914a087475bfca0b73f60a"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#a23132b9e6f914a087475bfca0b73f60a">RectLinePointer</a> (size_t line_num, size_t line_size, int *array2d)</td></tr>
-<tr class="separator:a23132b9e6f914a087475bfca0b73f60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54c7854c28f085cde10d7c00bd3c6ef0" id="r_a54c7854c28f085cde10d7c00bd3c6ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#a54c7854c28f085cde10d7c00bd3c6ef0">MyPutA2D</a> (int *array_2d, size_t coloumn_size, size_t line_size)</td></tr>
-<tr class="memdesc:a54c7854c28f085cde10d7c00bd3c6ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит 2мерный массив в поток стандартного вывода  <br /></td></tr>
-<tr class="separator:a54c7854c28f085cde10d7c00bd3c6ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9defaddde020eef5d6ab867ebef02fb3" id="r_a9defaddde020eef5d6ab867ebef02fb3"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#a9defaddde020eef5d6ab867ebef02fb3">RectLinePointer</a> (int *array2d, size_t line_num, size_t line_size)</td></tr>
+<tr class="memdesc:a9defaddde020eef5d6ab867ebef02fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет указатель на начало строки в 2мерном прямоугольном массиве масивве  <br /></td></tr>
+<tr class="separator:a9defaddde020eef5d6ab867ebef02fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a959eef83e3360e85e037c51cb9b56efd" id="r_a959eef83e3360e85e037c51cb9b56efd"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#a959eef83e3360e85e037c51cb9b56efd">MyGetElemA2D</a> (int *array_2d, size_t i, size_t j, size_t line_size, <a class="el" href="My2DArrayFunctions_8h.html#acc975e5ae0d6174f13a37de56cecba92">LinePointer</a> line_pointer_func)</td></tr>
+<tr class="memdesc:a959eef83e3360e85e037c51cb9b56efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет указатель на элемент в i строке и j столбце 2мерного массива  <br /></td></tr>
+<tr class="separator:a959eef83e3360e85e037c51cb9b56efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bc1a5a8f49b9b8f054ce375bef42ac8" id="r_a0bc1a5a8f49b9b8f054ce375bef42ac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#a0bc1a5a8f49b9b8f054ce375bef42ac8">MyPutA2D</a> (int *array_2d, size_t coloumn_size, size_t line_size, <a class="el" href="My2DArrayFunctions_8h.html#acc975e5ae0d6174f13a37de56cecba92">LinePointer</a> line_pointer_func)</td></tr>
+<tr class="memdesc:a0bc1a5a8f49b9b8f054ce375bef42ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит 2мерный массив в поток стандартного вывода  <br /></td></tr>
+<tr class="separator:a0bc1a5a8f49b9b8f054ce375bef42ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="acc975e5ae0d6174f13a37de56cecba92" name="acc975e5ae0d6174f13a37de56cecba92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc975e5ae0d6174f13a37de56cecba92">&#9670;&#160;</a></span>LinePointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int *(* LinePointer) (int *array2d, size_t line_num, size_t line_size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a54c7854c28f085cde10d7c00bd3c6ef0" name="a54c7854c28f085cde10d7c00bd3c6ef0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54c7854c28f085cde10d7c00bd3c6ef0">&#9670;&#160;</a></span>MyPutA2D()</h2>
+<a id="a959eef83e3360e85e037c51cb9b56efd" name="a959eef83e3360e85e037c51cb9b56efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959eef83e3360e85e037c51cb9b56efd">&#9670;&#160;</a></span>MyGetElemA2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * MyGetElemA2D </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array_2d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="My2DArrayFunctions_8h.html#acc975e5ae0d6174f13a37de56cecba92">LinePointer</a>&#160;</td>
+          <td class="paramname"><em>line_pointer_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычисляет указатель на элемент в i строке и j столбце 2мерного массива </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array_2d</td><td>2мерный массив </td></tr>
+    <tr><td class="paramname">i</td><td>i </td></tr>
+    <tr><td class="paramname">j</td><td>j </td></tr>
+    <tr><td class="paramname">line_size</td><td>максимальная длина строки </td></tr>
+    <tr><td class="paramname">line_pointer_func</td><td>Функция вычисления n-ой строчки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a0bc1a5a8f49b9b8f054ce375bef42ac8" name="a0bc1a5a8f49b9b8f054ce375bef42ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc1a5a8f49b9b8f054ce375bef42ac8">&#9670;&#160;</a></span>MyPutA2D()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +220,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>line_size</em>&#160;</td>
+          <td class="paramname"><em>line_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="My2DArrayFunctions_8h.html#acc975e5ae0d6174f13a37de56cecba92">LinePointer</a>&#160;</td>
+          <td class="paramname"><em>line_pointer_func</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -148,17 +239,19 @@ Functions</h2></td></tr>
 <p>Выводит 2мерный массив в поток стандартного вывода </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array_2d</td><td>массив </td></tr>
+    <tr><td class="paramname">array_2d</td><td>Массив </td></tr>
     <tr><td class="paramname">coloumn_size</td><td>Количество строк </td></tr>
     <tr><td class="paramname">line_size</td><td>Максимальная длина строки </td></tr>
+    <tr><td class="paramname">line_pointer_func</td><td>Функция вычисления n-ой строчки <br  />
+ </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a23132b9e6f914a087475bfca0b73f60a" name="a23132b9e6f914a087475bfca0b73f60a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23132b9e6f914a087475bfca0b73f60a">&#9670;&#160;</a></span>RectLinePointer()</h2>
+<a id="a9defaddde020eef5d6ab867ebef02fb3" name="a9defaddde020eef5d6ab867ebef02fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9defaddde020eef5d6ab867ebef02fb3">&#9670;&#160;</a></span>RectLinePointer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,6 +259,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int * RectLinePointer </td>
           <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array2d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>line_num</em>, </td>
         </tr>
@@ -173,13 +272,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>line_size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>array2d</em>&#160;</td>
+          <td class="paramname"><em>line_size</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -188,6 +281,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Вычисляет указатель на начало строки в 2мерном прямоугольном массиве масивве </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_num</td><td>Номер строки </td></tr>
+    <tr><td class="paramname">line_size</td><td>Максимальная длина строки </td></tr>
+    <tr><td class="paramname">array2d</td><td>2мерный массив </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Указатель на начало строки </dd></dl>
 
 </div>
 </div>
