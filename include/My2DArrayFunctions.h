@@ -35,4 +35,11 @@ int* MyGetElemA2D(int* array_2d, size_t i, size_t j, size_t line_size, LinePoint
 /// @param line_pointer_func Функция вычисления n-ой строчки 
 void MyPutA2D(int* array_2d, size_t coloumn_size, size_t line_size, LinePointer line_pointer_func);
 
+/// @brief Вводит 2мерный массив в поток стандартного вывода
+/// @param array_2d Массив
+/// @param coloumn_size Количество строк
+/// @param line_size Максимальная длина строки
+/// @param line_pointer_func Функция вычисления n-ой строчки 
+void MyGetA2D(int* array_2d, size_t coloumn_size, size_t line_size, LinePointer line_pointer_func);
+
 #endif // MY_2D_ARRAY_FUNCTIONS_

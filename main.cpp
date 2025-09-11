@@ -6,7 +6,9 @@
 #include "My2DArrayFunctions.h"
 
 int main() {
-    int array2d[6] = { 0, 1, 2, 3, 4, 5 };
+    int array2d[100] = {};
+
+    MyGetA2D(array2d, 3, 3, TriangleLinePointer);
 
     MyPutA2D(array2d, 3, 3, TriangleLinePointer);
 
