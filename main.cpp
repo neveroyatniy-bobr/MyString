@@ -11,6 +11,7 @@ int main() {
     MyGetLine(&s, &n, stdin);
 
     MyPutS(s);
+    MyPutS(MyFastStrStr(s, "aba"));
 
     free(s);
 

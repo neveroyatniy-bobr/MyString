@@ -82,8 +82,15 @@ char* MyStrNCat(char *destination, const char *source, size_t n);
 /// @brief Сравнивает 2 строки
 /// @param str1 Строка 1
 /// @param str2  Строка 2
-/// @return Если чтроки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1
+/// @return Если строки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1
 int MyStrCmp(const char *str1, const char *str2);
+
+/// @brief Сравнивает первые n символов из 2х строк
+/// @param str1 Строка 1
+/// @param str2  Строка 2
+/// @param n  n
+/// @return Если первые n символов строки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1
+int MyStrNCmp(const char *str1, const char *str2, size_t n);
 
 /// @brief Дубилирует строку в свобоное место в памяти
 /// @param str Строка
@@ -120,5 +127,11 @@ size_t MyGetLine(char** lineptr, size_t* n, FILE* stream);
 /// @param needle подстрока
 /// @return указатель на первое упоминание строки
 char* MyStrStr(const char *haystack, const char *needle);
+
+/// @brief Ищет подстроку в строке
+/// @param haystack строка
+/// @param needle подстрока
+/// @return указатель на первое упоминание строки
+char* MyFastStrStr(const char* haystack, const char* needle);
 
 #endif // MY_STRING_FUNCTIONS_H_

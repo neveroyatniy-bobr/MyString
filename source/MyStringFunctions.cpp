@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <unistd.h>
+#include <memory.h>
 
 int MyClamp(int n, int n_min, int n_max) {
     if (n < n_min) {
@@ -48,13 +49,13 @@ char* MyStrChr(const char* str, int ch) {
 
     while (*str != '\0') {
         if (*str == ch) {
-            return (char*)str;
+            return const_cast<char*>(str);
         }
 
         str++;
     }
 
-    return (ch == '\0') ? (char*)str : NULL;
+    return (ch == '\0') ? const_cast<char*>(str) : NULL;
 }
 char* MyStrRChr(const char* str, int ch) {
     assert(str != NULL);
@@ -63,14 +64,14 @@ char* MyStrRChr(const char* str, int ch) {
     while (*str != '\0')
     {
         last_mention = *str == ch 
-                     ? (char*)str 
+                     ? const_cast<char*>(str) 
                      : last_mention;
         
         str++;
     }
 
     return ch == '\0'
-         ? (char*)str
+         ? const_cast<char*>(str)
          : last_mention; 
 }
 
@@ -95,7 +96,6 @@ int MyAToI(const char *nptr) {
     }
 
     int n = 0;
-    size_t len = MyStrLen(nptr);
     
     bool is_signed = MyIsSign(*nptr);
     int sign = *nptr == '-' 
@@ -121,7 +121,7 @@ int MyAToI(const char *nptr) {
       : 0;
     
     return is_signed
-                ? n * (nptr[0] == '+' ? 1 : -1)
+                ? n * sign
                 : n;
 }
 
@@ -209,6 +209,25 @@ int MyStrCmp(const char *str1, const char *str2) {
     return sign;
 }
 
+int MyStrNCmp(const char *str1, const char *str2, size_t n) {
+    assert(str1 != NULL);
+    assert(str2 != NULL);
+
+    size_t cnt = 0;
+    while (*str1 == *str2 && *str1 != '\0' && cnt < n - 1) {
+        str1++;
+        str2++;
+        cnt++;
+    }
+    
+    int signed_ans = *str1 - *str2;
+    int sign = (signed_ans == 0) 
+                    ? 0 
+                    : signed_ans / abs(signed_ans);
+    
+    return sign;
+}
+
 char* MyStrDup(const char *str) {
     assert(str != NULL);
 
@@ -283,14 +302,15 @@ size_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
     assert(stream != NULL);
     assert(n != NULL);
 
-    int default_size = 16;
+    size_t default_size = 16;
     int grow_factor = 2;
 
     char* linestr = *lineptr;
     size_t size = *n;
-
+    
     if (linestr == NULL) {
         size = default_size;
+        
         linestr = (char*)calloc(size, sizeof(char));
     }
 
@@ -302,7 +322,13 @@ size_t MyGetLine(char** lineptr, size_t* n, FILE* stream) {
     {
         if (cnt == size - 1) {
             size *= (size_t)grow_factor;
-            linestr = (char*)realloc(linestr, size); 
+            char* new_linestr = (char*)realloc(linestr, size);
+            if (new_linestr != NULL) {
+                linestr = new_linestr;
+            }
+            else {
+                break;
+            }
         }
 
         linestr[cnt] = (char)current_ch;
@@ -363,6 +389,35 @@ char* MyStrStr(const char* haystack, const char* needle) {
         return NULL;
     } 
     else {
-        return *haystack == *needle ? (char*)haystack : NULL;
+        return *haystack == *needle ? const_cast<char*>(haystack) : NULL;
     }
+}
+
+char* MyFastStrStr(const char* haystack, const char* needle) {
+    assert(haystack != NULL);
+    assert(needle != NULL);
+
+    int needle_hash = 0;
+    int haystack_hash = 0;
+    size_t cnt = 0;
+    while (needle[cnt] != '\0') {
+        needle_hash += needle[cnt];
+        haystack_hash += haystack[cnt];
+        cnt++;
+    }
+    size_t needle_len = cnt;
+    size_t haystack_len = MyStrLen(haystack);
+
+    for (size_t i = 0; i <= haystack_len - needle_len; i++) {
+        if (haystack_hash == needle_hash) {
+            if (MyStrNCmp(needle, haystack + i, needle_len) == 0) {
+                return const_cast<char*>(haystack) + i;
+            }
+        }
+
+        if (i + needle_len < haystack_len) {
+            haystack_hash = haystack_hash - haystack[i] + haystack[i + needle_len];
+        }
+    }
+    return NULL;
 }
