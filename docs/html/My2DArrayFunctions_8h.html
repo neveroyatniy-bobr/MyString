@@ -115,6 +115,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9defaddde020eef5d6ab867ebef02fb3" id="r_a9defaddde020eef5d6ab867ebef02fb3"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#a9defaddde020eef5d6ab867ebef02fb3">RectLinePointer</a> (int *array2d, size_t line_num, size_t line_size)</td></tr>
 <tr class="memdesc:a9defaddde020eef5d6ab867ebef02fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет указатель на начало строки в 2мерном прямоугольном массиве масивве  <br /></td></tr>
 <tr class="separator:a9defaddde020eef5d6ab867ebef02fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e377838d1095214aa70e827232fe20c" id="r_a7e377838d1095214aa70e827232fe20c"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#a7e377838d1095214aa70e827232fe20c">TriangleLinePointer</a> (int *array2d, size_t line_num, size_t line_size)</td></tr>
+<tr class="memdesc:a7e377838d1095214aa70e827232fe20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет указатель на начало строки в 2мерном треугольном массиве масивве  <br /></td></tr>
+<tr class="separator:a7e377838d1095214aa70e827232fe20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a959eef83e3360e85e037c51cb9b56efd" id="r_a959eef83e3360e85e037c51cb9b56efd"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="My2DArrayFunctions_8h.html#a959eef83e3360e85e037c51cb9b56efd">MyGetElemA2D</a> (int *array_2d, size_t i, size_t j, size_t line_size, <a class="el" href="My2DArrayFunctions_8h.html#acc975e5ae0d6174f13a37de56cecba92">LinePointer</a> line_pointer_func)</td></tr>
 <tr class="memdesc:a959eef83e3360e85e037c51cb9b56efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет указатель на элемент в i строке и j столбце 2мерного массива  <br /></td></tr>
 <tr class="separator:a959eef83e3360e85e037c51cb9b56efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,6 +286,51 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Вычисляет указатель на начало строки в 2мерном прямоугольном массиве масивве </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_num</td><td>Номер строки </td></tr>
+    <tr><td class="paramname">line_size</td><td>Максимальная длина строки </td></tr>
+    <tr><td class="paramname">array2d</td><td>2мерный массив </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Указатель на начало строки </dd></dl>
+
+</div>
+</div>
+<a id="a7e377838d1095214aa70e827232fe20c" name="a7e377838d1095214aa70e827232fe20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e377838d1095214aa70e827232fe20c">&#9670;&#160;</a></span>TriangleLinePointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * TriangleLinePointer </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array2d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычисляет указатель на начало строки в 2мерном треугольном массиве масивве </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line_num</td><td>Номер строки </td></tr>

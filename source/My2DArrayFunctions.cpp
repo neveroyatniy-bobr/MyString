@@ -3,7 +3,13 @@
 #include <stdio.h>
 
 int* RectLinePointer(int* array2d, size_t line_num, size_t line_size) {
-    return (int*)((size_t)array2d + line_num * line_size * sizeof(array2d[0]));
+    size_t line_offset = line_num * line_size;
+    return (int*)((size_t)array2d + line_offset * sizeof(array2d[0]));
+}
+
+int* TriangleLinePointer(int* array2d, size_t line_num, size_t line_size) {
+    size_t line_offset = line_num * (line_num + 1) / 2;
+    return (int*)((size_t)array2d + line_offset * sizeof(array2d[0]));
 }
 
 int* MyGetElemA2D(int* array_2d, size_t i, size_t j, size_t line_size, LinePointer line_pointer_func) {
