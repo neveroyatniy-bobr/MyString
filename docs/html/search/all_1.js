@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['puts_0',['puts',['../MyStringFunctions_8h.html#ad41876f99f190c7488e64ef39c50a23f',1,'MyStringFunctions.h']]]
+  ['rectlinepointer_0',['rectlinepointer',['../My2DArrayFunctions_8h.html#a23132b9e6f914a087475bfca0b73f60a',1,'RectLinePointer(size_t line_num, size_t line_size, int *array2d):&#160;My2DArrayFunctions.cpp'],['../My2DArrayFunctions_8cpp.html#a23132b9e6f914a087475bfca0b73f60a',1,'RectLinePointer(size_t line_num, size_t line_size, int *array2d):&#160;My2DArrayFunctions.cpp']]]
 ];

@@ -3,17 +3,12 @@
 #include <stdlib.h>
 
 #include "MyStringFunctions.h"
+#include "My2DArrayFunctions.h"
 
 int main() {
-    char* s = NULL;
-    size_t  n = 0;
+    int array2d[2][3] = { { 1, 2, 3 }, { 4, 5, 6 } };
 
-    MyGetLine(&s, &n, stdin);
-
-    MyPutS(s);
-    MyPutS(MyFastStrStr(s, "aba"));
-
-    free(s);
+    MyPutA2D(*array2d, 2, 3);
 
     return 0;
 }

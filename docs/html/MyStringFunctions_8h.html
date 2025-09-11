@@ -148,6 +148,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a91b6d0f9adddb84424ce4634a20ee493" id="r_a91b6d0f9adddb84424ce4634a20ee493"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a91b6d0f9adddb84424ce4634a20ee493">MyStrCmp</a> (const char *str1, const char *str2)</td></tr>
 <tr class="memdesc:a91b6d0f9adddb84424ce4634a20ee493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнивает 2 строки  <br /></td></tr>
 <tr class="separator:a91b6d0f9adddb84424ce4634a20ee493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb39ca4e02dd6bad51588faa2315ccf" id="r_abfb39ca4e02dd6bad51588faa2315ccf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#abfb39ca4e02dd6bad51588faa2315ccf">MyStrNCmp</a> (const char *str1, const char *str2, size_t n)</td></tr>
+<tr class="memdesc:abfb39ca4e02dd6bad51588faa2315ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сравнивает первые n символов из 2х строк  <br /></td></tr>
+<tr class="separator:abfb39ca4e02dd6bad51588faa2315ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42aefe18cab1898dffc938d2e9644ec0" id="r_a42aefe18cab1898dffc938d2e9644ec0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a42aefe18cab1898dffc938d2e9644ec0">MyStrDup</a> (const char *str)</td></tr>
 <tr class="memdesc:a42aefe18cab1898dffc938d2e9644ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дубилирует строку в свобоное место в памяти  <br /></td></tr>
 <tr class="separator:a42aefe18cab1898dffc938d2e9644ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +169,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1ea53f38b85c81d39671e20d38c8a116" id="r_a1ea53f38b85c81d39671e20d38c8a116"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#a1ea53f38b85c81d39671e20d38c8a116">MyStrStr</a> (const char *haystack, const char *needle)</td></tr>
 <tr class="memdesc:a1ea53f38b85c81d39671e20d38c8a116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет подстроку в строке  <br /></td></tr>
 <tr class="separator:a1ea53f38b85c81d39671e20d38c8a116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48f835f9234e3d67caf5beab0effb19" id="r_ab48f835f9234e3d67caf5beab0effb19"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyStringFunctions_8h.html#ab48f835f9234e3d67caf5beab0effb19">MyFastStrStr</a> (const char *haystack, const char *needle)</td></tr>
+<tr class="memdesc:ab48f835f9234e3d67caf5beab0effb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет подстроку в строке  <br /></td></tr>
+<tr class="separator:ab48f835f9234e3d67caf5beab0effb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae3d7c2c4fa54c31aa877e597956c2b86" name="ae3d7c2c4fa54c31aa877e597956c2b86"></a>
@@ -237,6 +243,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Ближайшее к n число в диапазоне </dd></dl>
+
+</div>
+</div>
+<a id="ab48f835f9234e3d67caf5beab0effb19" name="ab48f835f9234e3d67caf5beab0effb19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48f835f9234e3d67caf5beab0effb19">&#9670;&#160;</a></span>MyFastStrStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * MyFastStrStr </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>haystack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>needle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ищет подстроку в строке </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">haystack</td><td>строка </td></tr>
+    <tr><td class="paramname">needle</td><td>подстрока </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>указатель на первое упоминание строки </dd></dl>
 
 </div>
 </div>
@@ -624,7 +668,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Если чтроки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Если строки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1 </dd></dl>
 
 </div>
 </div>
@@ -763,6 +807,51 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Назначение, в конец которого скопировано не более n символов из источник </dd></dl>
+
+</div>
+</div>
+<a id="abfb39ca4e02dd6bad51588faa2315ccf" name="abfb39ca4e02dd6bad51588faa2315ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb39ca4e02dd6bad51588faa2315ccf">&#9670;&#160;</a></span>MyStrNCmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyStrNCmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сравнивает первые n символов из 2х строк </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str1</td><td>Строка 1 </td></tr>
+    <tr><td class="paramname">str2</td><td>Строка 2 </td></tr>
+    <tr><td class="paramname">n</td><td>n </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Если первые n символов строки равны возвращает 0, если числовое значение первого несовпавшего символа меньше в строке 1б то -1, иначе 1 </dd></dl>
 
 </div>
 </div>
